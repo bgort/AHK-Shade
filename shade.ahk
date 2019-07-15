@@ -49,6 +49,7 @@ rollup(t := 2) {
     for i, e in IDs {
       if(InStr(e, winID)) { 
         t := StrSplit(e, "|")
+        WinActivate, % "ahk_id" t[1]
         WinMove, % "ahk_id" t[1],,,,, % t[2]
         IDs.Delete(i)
         return
