@@ -1,5 +1,7 @@
 #NoEnv
 #SingleInstance, Force
+#MaxHotkeysPerInterval 300
+
 SetKeyDelay, 0
 
 tb_siz := 30
