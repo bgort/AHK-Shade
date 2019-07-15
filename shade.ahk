@@ -47,7 +47,7 @@ $^MButton::
 rollup(t := 2) {  
   global IDs, winID
 
-  if (t) {
+  if(t) {
     for i, e in IDs {
       if(InStr(e, winID)) { 
         t := StrSplit(e, "|")
@@ -59,7 +59,7 @@ rollup(t := 2) {
     }
   }
 
-  if (t!=1) {
+  if(t!=1) {
     for i, e in IDs {
       if(InStr(e, winID)) { 
         return
