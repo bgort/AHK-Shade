@@ -13,4 +13,4 @@ With this script, windows can be shaded/unshaded by:
 
 ### License
 
-This is published under the GNU GPLv3 license because I want it to be used widely and freely.
+These tools are published under the GNU GPLv3 license because I want them to be used and shared widely and freely.
