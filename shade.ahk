@@ -1,6 +1,6 @@
 #NoEnv
 #SingleInstance, Force
-#MaxHotkeysPerInterval 300
+#MaxHotkeysPerInterval 100
 
 SetKeyDelay, 0
 
