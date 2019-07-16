@@ -7,6 +7,7 @@ SetKeyDelay, 0
 tb_siz := 30
 dblclk_t := 200
 IDs := []
+
 OnExit("cleanup")
 
 $WheelDown::
@@ -14,8 +15,8 @@ $WheelUp::
 $LButton::
 $MButton::
   hk := A_ThisHotKey
-  hkn := LTrim(hk,"$")
-  whl := InStr(hkn,"Wheel")  
+  hkn := LTrim(hk, "$")
+  whl := InStr(hkn, "Wheel")  
   
   CoordMode, Mouse, Screen
   MouseGetPos, mX, mY, winID
@@ -27,7 +28,7 @@ $MButton::
     if(whl) {
       Send {%hkn%}
     } else {
-      btn := SubStr(hkn,1,1)
+      btn := SubStr(hkn, 1, 1)
       MouseClick, % btn,,,,, D
       KeyWait, % hkn
       MouseClick, % btn,,,,, U
@@ -44,10 +45,10 @@ $^MButton::
   return
 
 ; t==0 roll up, t==1 roll down, t==2 toggle
-rollup(t := 2) {  
+rollup(type := 2) {  
   global IDs, winID
 
-  if(t) {
+  if(type) {
     for i, e in IDs {
       if(InStr(e, winID)) { 
         t := StrSplit(e, "|")
@@ -59,7 +60,7 @@ rollup(t := 2) {
     }
   }
 
-  if(t!=1) {
+  if(type!=1) {
     for i, e in IDs {
       if(InStr(e, winID)) { 
         return
